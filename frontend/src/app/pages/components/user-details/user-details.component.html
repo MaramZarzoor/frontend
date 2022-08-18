@@ -1,0 +1,44 @@
+<div class="title-bar">
+  <div class="dialog-title">
+    Users Details
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div style="margin: 6%; font-weight: bold;  color: black">
+      <label style="font-weight: bold;color: #573b8a;">First Name</label>
+      {{data.firstName}}
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div style="margin: 6%; font-weight: bold;  color: black">
+      <label style="font-weight: bold;color: #573b8a;">Last Name</label>
+      {{data.lastName}}
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div style=" margin: 6%;font-weight: bold;  color: black">
+      <label style="font-weight: bold;color: #573b8a;">Email Address</label>
+      {{data.email}}
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div style="margin: 6%; font-weight: bold;  color: black">
+      <label style="color: #573b8a;">Address</label>
+      {{data.address}}
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div style=" margin: 6%; font-weight: bold; color: black">
+      <label style="color: #573b8a;">Contact Number</label>
+      {{data.contactNumber}}
+    </div>
+  </div>
+</div>
+<button class="close-button" (click)="close()">Close</button>
+

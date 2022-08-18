@@ -1,0 +1,56 @@
+<body>
+<div class="main">
+  <input type="checkbox" id="chk" aria-hidden="true">
+
+  <div class="signup">
+    <form [formGroup]="signUpForm" (ngSubmit)="signUpForm.valid" novalidate>
+      <label for="chk" aria-hidden="true" class="signup-label">Sign up</label>
+      <input formControlName="firstName" type="text" placeholder="First Name" required>
+      <div class="validator" *ngIf="signUpForm.controls['firstName'].errors?.required && isSubmitted">First Name is required</div>
+        <div class="validator" *ngIf="signUpForm.controls['firstName'].errors?.minlength">
+          First Name must be 2 characters
+        </div>
+      <input formControlName="lastName" type="text" placeholder="Last Name" required="required">
+      <div class="validator" *ngIf="signUpForm.controls['lastName'].errors?.required && isSubmitted">Last Name is required</div>
+      <div class="validator" *ngIf="signUpForm.controls['lastName'].errors?.minlength">
+        Last Name must be 2 characters
+      </div>
+      <input formControlName="email" type="email" placeholder="Email Address" required="">
+      <div class="validator" *ngIf="signUpForm.controls['email'].errors?.required && isSubmitted">Email is required</div>
+      <div class="validator" *ngIf="signUpForm.controls['email'].errors?.email">
+        Email must be valid
+      </div>
+      <input formControlName="address" type="text"  placeholder="Address" required="">
+      <div class="validator" *ngIf="signUpForm.controls['address'].errors?.required && isSubmitted">Address is required</div>
+      <div class="validator" *ngIf="signUpForm.controls['address'].errors?.minlength">
+        Address must be 2 characters
+      </div>
+      <input formControlName="contactNumber" type="number" placeholder="Contact Number" required="">
+      <div class="validator" *ngIf="signUpForm.controls['contactNumber'].errors?.required && isSubmitted">Contact Number is required</div>
+      <div class="validator" *ngIf="signUpForm.controls['contactNumber'].errors?.minlength">
+        Contact Number must be at least 2 characters
+      </div>
+      <input formControlName="password" type="password"  placeholder="Password" required="">
+      <div class="validator" *ngIf="signUpForm.controls['password'].errors?.required && isSubmitted">password is required</div>
+      <div class="validator" *ngIf="signUpForm.controls['password'].errors?.minlength">
+        password must be at least 8 characters
+      </div>
+        <div class="validator" *ngIf="signUpForm.controls['password'].errors?.pattern">
+       Password must have at least 8 characters one uppercase letter one lowercase letter
+          and one number alphanumeric character      </div>
+      <button (click)="signUp()">Sign up</button>
+    </form>
+  </div>
+
+  <div class="login">
+    <form [formGroup]="loginForm">
+      <label for="chk" aria-hidden="true" class="login-label">Login</label>
+      <input formControlName="email" id="email" type="email" placeholder="Email" required="">
+      <div class="validator" *ngIf="loginForm.controls['email'].errors?.required && isLoginSubmitted">Email is required</div>
+      <input formControlName="password" id="password" type="password" placeholder="Password" required="">
+        <div class="validator" *ngIf="loginForm.controls['password'].errors?.required && isLoginSubmitted">Password is required</div>
+      <button (click)="login()">Login</button>
+    </form>
+  </div>
+</div>
+</body>

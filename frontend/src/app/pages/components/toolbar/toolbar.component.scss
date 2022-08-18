@@ -1,0 +1,90 @@
+::ng-deep .mat-toolbar-row, .mat-toolbar-single-row {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 16px;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  background-image: linear-gradient(to bottom, #0f0c29, #4d4878, #24243e);
+  height: 8vh;
+}
+.title{
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation {
+  width: 100%;
+  background-color: black;
+}
+
+.icon {
+  width: 25px;
+  border-radius: 50px;
+  float: left;
+}
+
+.logout {
+  font-size: .8em;
+  font-family: 'Oswald', sans-serif;
+  position: relative;
+  right: -18px;
+  bottom: -4px;
+  overflow: hidden;
+  letter-spacing: 3px;
+  opacity: 0;
+  transition: opacity .45s;
+  -webkit-transition: opacity .35s;
+
+}
+
+.button {
+  text-decoration: none;
+  float: right;
+  padding: 12px;
+  margin: 15px;
+  color: white;
+  width: 53px;
+  background-image: linear-gradient(to bottom, #0f0c29, #4d4878, #24243e);
+  transition: width 0.35s;
+  -webkit-transition: width 0.35s;
+  overflow: hidden;
+  margin-top: -45px;
+  height: 43px;
+}
+
+a:hover {
+  width: 130px;
+}
+
+a:hover .logout{
+  opacity: .9;
+}
+
+a {
+  text-decoration: none;
+}
+@media only screen and (max-width: 990px) {
+  .login-button {
+    display: flex;
+    float: right;
+    margin-top: -4.5%;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .login-button {
+    display: flex;
+    float: right;
+    margin-top: -6%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .login-button {
+    display: flex;
+    float: right;
+    margin-top: -10%;
+  }
+}

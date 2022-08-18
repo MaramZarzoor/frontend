@@ -1,0 +1,18 @@
+.title-bar {
+  background-color: #4d4878;
+  color: white;
+  padding: 10px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  border-radius: 12px;
+}
+.close-button{
+  background-color: #4d4878;
+  border: #563b89;
+  color: white;
+  padding: 5px 25px 5px 25px;
+  border-radius: 12px;
+  float: right;
+}
